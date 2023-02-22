@@ -1,0 +1,14 @@
+{
+    "name": "francerz/mx-clabe",
+    "description": "Libreria para validar la CLABE en Mexico.",
+    "type": "library",
+    "license": "ISC",
+    "autoload": {
+        "psr-4": {
+            "Francerz\\MxClabe\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
+    }
+}
