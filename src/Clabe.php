@@ -43,7 +43,11 @@ class Clabe
 
     public function getNumeroCuenta()
     {
-        return substr($this->clabe, 6, 11);
+        $ncuenta = substr($this->clabe, 6, 11);
+        if (in_array($this->getCodigoBanco(), ['002'])) {
+            $ncuenta = substr($ncuenta, 0, 4) . ltrim(substr($ncuenta, 4), '0');
+        }
+        return ltrim($ncuenta, '0');
     }
 
     public function esValida()
